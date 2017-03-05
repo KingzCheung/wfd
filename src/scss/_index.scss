@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+$banner-height:220px;
+.banner {
+    position: relative;
+    height: $banner-height;
+    img {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        margin: auto;
+        width: 100%;
+        height: auto;
+    }
+    p {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        color: #fff;
+        text-align: center;
+        right: 0;
+    }
+    a{
+        display: block;
+        height:$banner-height;
+    }
+}
+.banner-desc{
+    padding:10px;
+    background-color: #ffffff;
+    font-size: rem(14px);
+    display: flex;
+    .banner-hd{
+        width:rem(70px);
+        color: #777;
+    }
+}

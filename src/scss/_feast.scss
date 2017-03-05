@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.feast {
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: white;
+    .feast-title {
+        padding: 10px;
+        color: #777;
+    }
+    .feast-content {
+        display: flex;
+        align-items: baseline;
+        margin: 5px;
+    }
+    .f-item {
+        display: block;
+        flex: 1;
+        margin: 0 5px;
+    }
+    .f-cover {
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+        height: 80px;
+        & > img {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            right: -9999px;
+            bottom: -9999px;
+            margin: auto;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .f-title {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+}

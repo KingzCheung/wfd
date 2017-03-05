@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.week {
+    background: #fff;
+    margin-top: 10px;
+    font-size: 14px;
+    .week-item {
+        display: flex;
+    }
+    a {
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        padding: 10px;
+        &:active {
+            background-color: #fafafa;
+        }
+        p{
+            margin-top:rem(3px);
+        }
+    }
+}

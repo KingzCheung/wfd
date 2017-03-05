@@ -1,0 +1,43 @@
+@import "init";
+*{
+    padding:0;
+    margin:0;
+}
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+}
+html {
+    font-size: $html-font-size;
+}
+html,body {
+    background-color: #fafafa;
+    padding:0;
+    margin:0;
+}
+h1, h2 {
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    color: $main-color;
+    text-decoration: none;
+}
+
+.icon {
+    width: 2em; height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
