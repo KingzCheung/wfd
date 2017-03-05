@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.header {
+    background-color: white;
+    height: 50px;
+    line-height: 1;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &:after {
+        @include line-buttom;
+    }
+    .header-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: inherit;
+        font-weight: 400;
+        flex: 1;
+    }
+    &.is-fixed {
+        position: fixed;
+        left:0;
+        top:0;
+        right: 0;
+        z-index: 999;
+    }
+
+    .header-left {
+        font-size: 12px;
+    }
+    .header-right{
+        font-size: 12px;
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+    a{
+        display: inline-block;
+    }
+}

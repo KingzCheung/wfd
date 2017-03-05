@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.profile{
+    background-color: white;
+    .head {
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        &:after{
+            @include line-buttom;
+        }
+    }
+    .head-cover{
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        img{
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            right: -9999px;
+            bottom: -9999px;
+            margin: auto;
+            width: 100%;
+            height: auto;
+            max-width: none;
+            border-radius: 100px;
+        }
+    }
+    .head-name{
+        margin: 10px;
+    }
+
+    .card {
+        position: relative;
+        padding: 10px;
+        display: flex;
+        .card-item {
+            flex:1;
+            text-align: center;
+            .title {
+                font-size: rem(12px);
+            }
+        }
+        &:after{
+            @include line-buttom;
+        }
+    }
+}

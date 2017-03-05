@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.cell {
+    background-color: white;
+    position: relative;
+    &:before {
+        @include line-top;
+    }
+    .cell-list {
+        display: block;
+    }
+    aside {
+        max-width: 100%;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        img {
+            @include cover;
+        }
+    }
+    .cell-list {
+        position: relative;
+        &:after {
+            @include line-buttom;
+        }
+        a {
+            display: block;
+            padding: 10px;
+        }
+    }
+    .list-title{
+        color: #333;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+}

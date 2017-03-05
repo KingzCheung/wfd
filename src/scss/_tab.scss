@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.tab-list {
+    background-color: white;
+    margin-top: 10px;
+    display: flex;
+    .list {
+        flex: 1;
+        text-align: center;
+        padding: 10px 0;
+        &.current {
+            border-bottom: 1px solid $main-color;
+            color: $main-color;
+        }
+    }
+}
