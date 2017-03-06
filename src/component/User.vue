@@ -7,11 +7,15 @@
         </div>
 
         <div class="container login-msg" v-if="!user.id">
-            <router-link to="/login" class="btn btn-info btn-inline">你还未登录，请先登录</router-link>
+            <router-link to="/signin" class="btn btn-info btn-inline">你还未登录，请先登录</router-link>
         </div>
 
     </div>
 </template>
+
+<style lang="scss">
+    @import "../scss/base.scss";
+</style>
 
 <script>
 
