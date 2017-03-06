@@ -1,9 +1,13 @@
 <template>
     <div id="user">
         <w-head message="个人资料" left right></w-head>
-        <div class="container">
+        <div class="container" v-if="user.id">
             <profile></profile>
             <tab></tab>
+        </div>
+
+        <div class="container login-msg" v-if="!user.id">
+            <router-link to="/login" class="btn btn-info btn-inline">你还未登录，请先登录</router-link>
         </div>
 
     </div>
@@ -18,7 +22,9 @@
         name: 'user',
         data () {
             return {
-                msg: 'Welcome to Foo'
+                user: {
+                    id: null
+                }
             }
         },
         components:{

@@ -43,6 +43,10 @@ const router = new VueRouter({
             component: (resolve) => {
                 require(['./component/Index.vue'], resolve)
             }
+        },
+        {
+            path: '*', //其他页面，强制跳转
+            redirect: '/'
         }
     ]
 });

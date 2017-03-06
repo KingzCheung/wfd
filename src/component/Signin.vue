@@ -5,13 +5,10 @@
 
     </div>
 </template>
-
 <style lang="scss">
     @import "../scss/base.scss";
 </style>
-
 <script>
-
 
     export default {
         name: 'foo',
