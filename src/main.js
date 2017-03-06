@@ -1,11 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
-import {Tabbar, TabItem, Swipe, SwipeItem} from 'mint-ui';
+import {Tabbar, TabItem, Swipe, SwipeItem, Field} from 'mint-ui';
 import w_head from './component/Header.vue';
 import User from './component/User.vue';
 import Viewlist from './component/ViewList.vue';
 import Add from  './component/Add.vue';
+import Signin from  './component/Signin.vue';
 import './fonts/iconfont.css';
 import './fonts/iconfont';
 
@@ -17,6 +18,8 @@ Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(w_head.name, w_head);
 Vue.component(Viewlist.name, Viewlist);
 Vue.component(Add.name, Add);
+Vue.component(Signin.name, Signin);
+Vue.component(Field.name, Field);
 
 const router = new VueRouter({
     mode: 'hash',
@@ -36,6 +39,11 @@ const router = new VueRouter({
             path: '/viewlist',
             name: 'viewlist',
             component: Viewlist
+        },
+        {
+            path: '/signin',
+            name: 'signin',
+            component: Signin
         },
         {
             path: '/',
