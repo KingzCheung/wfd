@@ -1,10 +1,17 @@
 <template>
     <div id="add">
-        <w-head></w-head>
-        <div class="container">
+        <div class="add-cookbook">
             <transition name="fade">
-                {{msg}}
+                <router-link to="/user" class="cencel">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-close"></use>
+                    </svg>
+                </router-link>
             </transition>
+
+            <div class="form">
+                <mt-field placeholder="写下您要吃的菜名" type="textarea" rows="4"></mt-field>
+            </div>
         </div>
 
     </div>
