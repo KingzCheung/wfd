@@ -1,17 +1,32 @@
 <template>
-    <div id="cell">
-        <div class="w-cells">
-            <a href="javascript:;" class="cell-list">
-                <div class="cell-header">
-                    <slot name="header"></slot>
-                </div>
-                <div class="cell-body">
-                    <slot name="body"></slot>
-                </div>
-                <div class="cell-footer">
-                    <slot name="footer"></slot>
-                </div>
-            </a>
+    <a :href="link" class="cell-list" v-if="link">
+        <div class="cell-header">
+            <slot name="header"></slot>
+        </div>
+        <div class="cell-body">
+            <slot name="body"></slot>
+        </div>
+        <div class="cell-footer">
+            <slot name="footer">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-more"></use>
+                </svg>
+            </slot>
+        </div>
+    </a>
+    <div class="cell-list" v-else>
+        <div class="cell-header">
+            <slot name="header"></slot>
+        </div>
+        <div class="cell-body">
+            <slot name="body"></slot>
+        </div>
+        <div class="cell-footer">
+            <slot name="footer">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-more"></use>
+                </svg>
+            </slot>
         </div>
     </div>
 </template>
@@ -24,10 +39,13 @@
 
 
     export default {
-        name: 'w-cell',
+        name: 'cell-list',
         data () {
             return {}
         },
+        props: {
+            link: String
+        }
 
     }
 </script>
