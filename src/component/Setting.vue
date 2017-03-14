@@ -3,7 +3,8 @@
         <w-head message="设置"></w-head>
         <div class="container">
             <w-cell>
-                <mt-switch v-model="value">开关</mt-switch>
+                <p slot="header">第一个开头</p>
+                <mt-switch v-model="value" slot="footer"></mt-switch>
             </w-cell>
 
         </div>
