@@ -1,6 +1,6 @@
 <template>
     <div id="index">
-        <w-head message="今天吃什么" left></w-head>
+        <w-head message="今天吃什么"></w-head>
         <div class="container">
             <mt-swipe :auto="0" class="banner">
                 <mt-swipe-item>
@@ -25,9 +25,15 @@
             <div class="banner-desc">
                 <p class="banner-hd">今天菜谱:</p>
                 <ul>
-                    <li><a href="#">包饺子</a></li>
-                    <li><a href="#">烫种牛奶吐司</a></li>
-                    <li><a href="#">可乐鸡翅</a></li>
+                    <li>
+                        <router-link :to="{ name: 'cookbook', params: { id: 123 }}">包饺子</router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'cookbook', params: { id: 124 }}">烫种牛奶吐司</router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'cookbook', params: { id: 125 }}">可乐鸡翅</router-link>
+                    </li>
                 </ul>
             </div>
 

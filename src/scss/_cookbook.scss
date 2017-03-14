@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.cookbook-cover {
+    max-width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    & > img {
+        @include cover;
+    }
+}
+
+.cookbook-detail {
+    background-color: #FFFFFF;
+    padding: 10px;
+    .cb-title {
+        text-align: center;
+    }
+    .cb-description {
+        margin: 10px 0;
+        font-size: rem(15px);
+        color: #555;
+    }
+    .ingredients {
+        h3 {
+            margin: 10px 0;
+        }
+        .w-cells {
+            font-size: rem(14px);
+        }
+        .cell-list {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .cb-content {
+        h3 {
+            margin: 10px 0;
+        }
+    }
+}

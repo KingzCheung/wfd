@@ -1,6 +1,6 @@
 <template>
     <div id="user">
-        <w-head message="个人资料" left right></w-head>
+        <w-head message="个人资料" right></w-head>
         <div class="container" v-if="user.id">
             <profile></profile>
             <tab></tab>
