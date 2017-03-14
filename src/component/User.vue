@@ -27,7 +27,7 @@
         data () {
             return {
                 user: {
-                    id: null
+                    id: 1
                 }
             }
         },

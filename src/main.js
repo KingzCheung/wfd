@@ -1,12 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
-import {Tabbar, TabItem, Swipe, SwipeItem, Field} from 'mint-ui';
+import {Tabbar, TabItem, Swipe, SwipeItem, Field, Switch} from 'mint-ui';
 import w_head from './component/Header.vue';
 import User from './component/User.vue';
 import Viewlist from './component/ViewList.vue';
 import Add from  './component/Add.vue';
 import Signin from  './component/Signin.vue';
+import Setting from  './component/Setting.vue';
 import './fonts/iconfont.css';
 import './fonts/iconfont';
 
@@ -20,6 +21,8 @@ Vue.component(Viewlist.name, Viewlist);
 Vue.component(Add.name, Add);
 Vue.component(Signin.name, Signin);
 Vue.component(Field.name, Field);
+Vue.component(Setting.name, Setting);
+Vue.component(Switch.name, Switch);
 
 const router = new VueRouter({
     mode: 'hash',
@@ -44,6 +47,11 @@ const router = new VueRouter({
             path: '/signin',
             name: 'signin',
             component: Signin
+        },
+        {
+            path: '/setting',
+            name: 'setting',
+            component: Setting
         },
         {
             path: '/',
