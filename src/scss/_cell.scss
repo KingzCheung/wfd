@@ -9,12 +9,14 @@
     &:after {
         @include line-buttom;
     }
-
     .cell-list {
         padding: 10px 15px;
         position: relative;
         display: flex;
         align-items: center;
+        &:before {
+            @include line-top;
+        }
     }
     .cell-body {
         flex: 1;
@@ -22,5 +24,11 @@
     .mint-switch-input:checked + .mint-switch-core {
         border-color: $main-color;
         background-color: $main-color;
+    }
+}
+
+a.cell-list {
+    &:active {
+        background-color: #fafafa;
     }
 }

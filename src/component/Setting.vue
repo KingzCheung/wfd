@@ -2,10 +2,16 @@
     <div id="setting">
         <w-head message="设置"></w-head>
         <div class="container">
-            <w-cell>
-                <p slot="header">第一个开头</p>
-                <mt-switch v-model="value" slot="footer"></mt-switch>
-            </w-cell>
+            <cells>
+                <cell-list>
+                    <p slot="header">第一个开头</p>
+                    <mt-switch v-model="value" slot="footer"></mt-switch>
+                </cell-list>
+
+                <cell-list link="https://www.kingzcheung.com">
+                    <p slot="header">第二个开头</p>
+                </cell-list>
+            </cells>
 
         </div>
     </div>
@@ -16,16 +22,18 @@
 </style>
 
 <script>
-    import Cells from './common/Cell.vue';
+    import cells from './common/Cells.vue';
+    import cell from './common/Cell.vue';
     export default {
         name: 'setting',
         data () {
             return {
-                msg: 'Welcome to Foo'
+                value: false
             }
         },
         components: {
-            'w-cell': Cells
+            'cells': cells,
+            'cell-list': cell
         }
     }
 </script>
