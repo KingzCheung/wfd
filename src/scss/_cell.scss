@@ -18,6 +18,9 @@
             @include line-top;
         }
     }
+    .cell-header {
+        width: 120px;
+    }
     .cell-body {
         flex: 1;
     }

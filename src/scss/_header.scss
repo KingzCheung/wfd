@@ -32,9 +32,13 @@
 
     .header-left {
         font-size: 12px;
+        position: absolute;
+        left: 10px;
     }
     .header-right{
         font-size: 12px;
+        position: absolute;
+        right: 10px;
         svg {
             width: 1.5em;
             height: 1.5em;

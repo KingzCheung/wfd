@@ -2,11 +2,11 @@
     <div id="head">
         <header class="header is-fixed">
             <div v-if="left" class="header-left">
-                <router-link to="/add">
+                <a onclick="window.history.go(-1)">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-add"></use>
+                        <use xlink:href="#icon-back"></use>
                     </svg>
-                </router-link>
+                </a>
             </div>
             <h3 class="header-title">{{message}}</h3>
             <div v-if="right" class="header-right">
@@ -26,6 +26,8 @@
 
 <script>
 
+    import Vue from 'vue';
+
     export default {
         name: 'w-head',
         data () {
@@ -35,7 +37,7 @@
             message: String,
             left: Boolean,
             right: Boolean
-        }
+        },
 
     }
 </script>

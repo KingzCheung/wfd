@@ -8,6 +8,7 @@ import Viewlist from './component/ViewList.vue';
 import Add from  './component/Add.vue';
 import Signin from  './component/Signin.vue';
 import Setting from  './component/Setting.vue';
+import Cookbook from  './component/Cookbook.vue';
 import './fonts/iconfont.css';
 import './fonts/iconfont';
 
@@ -23,6 +24,7 @@ Vue.component(Signin.name, Signin);
 Vue.component(Field.name, Field);
 Vue.component(Setting.name, Setting);
 Vue.component(Switch.name, Switch);
+Vue.component(Cookbook.name, Cookbook);
 
 const router = new VueRouter({
     mode: 'hash',
@@ -52,6 +54,11 @@ const router = new VueRouter({
             path: '/setting',
             name: 'setting',
             component: Setting
+        },
+        {
+            path: '/cookbook/:id',
+            name: 'cookbook',
+            component: Cookbook
         },
         {
             path: '/',
