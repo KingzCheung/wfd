@@ -6,4 +6,21 @@
     font-size: 17px;
     overflow: hidden;
     position: relative;
+    &:after {
+        @include line-buttom;
+    }
+
+    .cell-list {
+        padding: 10px 15px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .cell-body {
+        flex: 1;
+    }
+    .mint-switch-input:checked + .mint-switch-core {
+        border-color: $main-color;
+        background-color: $main-color;
+    }
 }

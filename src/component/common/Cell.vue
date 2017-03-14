@@ -1,8 +1,16 @@
 <template>
     <div id="cell">
         <div class="w-cells">
-            <a href="javascript:;">
-                aaa
+            <a href="javascript:;" class="cell-list">
+                <div class="cell-header">
+                    <slot name="header"></slot>
+                </div>
+                <div class="cell-body">
+                    <slot name="body"></slot>
+                </div>
+                <div class="cell-footer">
+                    <slot name="footer"></slot>
+                </div>
             </a>
         </div>
     </div>
