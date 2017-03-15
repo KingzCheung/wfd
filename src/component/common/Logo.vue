@@ -22,6 +22,5 @@
                 msg: 'Welcome to Foo'
             }
         },
-
     }
 </script>
