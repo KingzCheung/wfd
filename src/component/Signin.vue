@@ -8,6 +8,8 @@
                 </svg>
             </router-link>
 
+            <logo></logo>
+
             <div class="form">
                 <mt-field label="用户名" placeholder="请输入用户名" state="success"></mt-field>
                 <mt-field label="密码" placeholder="请输入密码" type="password" state="error"></mt-field>
@@ -26,6 +28,7 @@
 </style>
 <script>
 
+    import logo from './common/Logo.vue';
     export default {
         name: 'signin',
         data () {
@@ -33,6 +36,9 @@
                 msg: 'Welcome to Foo'
             }
         },
+        components: {
+            logo
+        }
 
     }
 </script>
