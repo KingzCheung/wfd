@@ -28,7 +28,7 @@
 </style>
 <script>
 
-    import logo from './common/Logo.vue';
+    import logo from '../component/common/Logo.vue';
     export default {
         name: 'signin',
         data () {

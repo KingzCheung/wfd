@@ -22,8 +22,8 @@
 </style>
 
 <script>
-    import cells from './common/Cells.vue';
-    import cell from './common/Cell.vue';
+    import cells from '../component/common/Cells.vue';
+    import cell from '../component/common/Cell.vue';
     export default {
         name: 'setting',
         data () {

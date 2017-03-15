@@ -19,8 +19,8 @@
 
 <script>
 
-    import profile from './Profile.vue';
-    import tab from './Tab.vue';
+    import profile from '../component/Profile.vue';
+    import tab from '../component/Tab.vue';
 
     export default {
         name: 'user',

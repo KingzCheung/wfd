@@ -12,7 +12,7 @@
 </style>
 
 <script>
-    import list from './List.vue';
+    import list from '../component/List.vue';
     export default {
         name: 'viewlist',
         data () {

@@ -46,8 +46,8 @@
 
 <script>
 
-    import week from './Week.vue';
-    import feast from './Feast.vue';
+    import week from '../component/Week.vue';
+    import feast from '../component/Feast.vue';
 
 
     export default {

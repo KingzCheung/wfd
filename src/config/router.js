@@ -3,13 +3,13 @@
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Viewlist from '../component/ViewList.vue';
-import Add from  '../component/Add.vue';
-import Signin from  '../component/Signin.vue';
-import Setting from  '../component/Setting.vue';
-import Cookbook from  '../component/Cookbook.vue';
-import Category from  '../component/Category.vue';
-import User from '../component/User.vue';
+import Viewlist from '../views/ViewList.vue';
+import Add from  '../views/Add.vue';
+import Signin from  '../views/Signin.vue';
+import Setting from  '../views/Setting.vue';
+import Cookbook from  '../views/Cookbook.vue';
+import Category from  '../views/Category.vue';
+import User from '../views/User.vue';
 
 Vue.component(Viewlist.name, Viewlist);
 Vue.component(Add.name, Add);
@@ -62,7 +62,7 @@ export default new VueRouter({
             path: '/',
             name: 'index',
             component: (resolve) => {
-                require(['../component/Index.vue'], resolve)
+                require(['../views/Index.vue'], resolve)
             }
         },
         {
