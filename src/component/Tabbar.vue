@@ -4,7 +4,7 @@
             <router-link to="/" class="tab-item" exact>
                 <div class="item-icon">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-home"></use>
+                        <use xlink:href="#icon-compass"></use>
                     </svg>
                 </div>
                 <h3 class="item-label">首页</h3>
@@ -18,6 +18,16 @@
                 </div>
                 <h3 class="item-label">榜单</h3>
             </router-link>
+
+            <router-link to="/category" class="tab-item">
+                <div class="item-icon">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-viewgallery"></use>
+                    </svg>
+                </div>
+                <h3 class="item-label">分类</h3>
+            </router-link>
+
             <router-link to="/user" class="tab-item">
                 <div class="item-icon">
                     <svg class="icon" aria-hidden="true">
