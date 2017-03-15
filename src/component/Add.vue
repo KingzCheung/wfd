@@ -22,8 +22,6 @@
 </style>
 
 <script>
-
-
     export default {
         name: 'add',
         data () {
@@ -31,6 +29,5 @@
                 msg: 'Add'
             }
         },
-
     }
 </script>
