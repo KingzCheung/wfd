@@ -24,6 +24,12 @@
     .cell-body {
         flex: 1;
     }
+    .cell-footer {
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
     .mint-switch-input:checked + .mint-switch-core {
         border-color: $main-color;
         background-color: $main-color;
