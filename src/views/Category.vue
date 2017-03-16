@@ -2,11 +2,10 @@
     <div id="category">
         <w-head message="分类"></w-head>
         <div class="container">
-            <cells>
-                <cell-list link="https://www.kingzcheung.com" v-for="i in 5">
-                    <p slot="header">第{{ i }}个开头</p>
-                </cell-list>
-            </cells>
+
+            <grids>
+                <grid-list :to="item.to" :text="item.text" v-for="item in categorys"></grid-list>
+            </grids>
 
         </div>
 
@@ -18,18 +17,28 @@
 </style>
 
 <script>
-    import cells from '../component/common/Cells.vue';
-    import cell from '../component/common/Cell.vue';
+    import grids from '../component/common/Grids.vue';
+    import grid from '../component/common/Grid.vue';
     export default {
         name: 'category',
         data () {
             return {
-                msg: 'Welcome to Foo'
+                categorys: [
+                    {to: '/', text: "第1个"},
+                    {to: '/category', text: "第2个"},
+                    {to: '/category', text: "第3个"},
+                    {to: '/category', text: "第4个"},
+                    {to: '/category', text: "第5个"},
+                    {to: '/category', text: "第6个"},
+                    {to: '/category', text: "第7个"},
+                    {to: '/category', text: "第8个"},
+                    {to: '/category', text: "第9个"}
+                ]
             }
         },
         components: {
-            'cells': cells,
-            'cell-list': cell
+            'grids': grids,
+            'grid-list': grid
         }
 
     }
