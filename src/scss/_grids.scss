@@ -57,5 +57,14 @@
         text-overflow: ellipsis;
         overflow: hidden;
     }
+    .grid-icon {
+        width: 28px;
+        height: 28px;
+        margin: 0 auto;
+    }
+
+    .grid-icon + .grid-label {
+        margin-top: 5px;
+    }
 
 }

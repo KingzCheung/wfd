@@ -4,7 +4,13 @@
         <div class="container">
 
             <grids>
-                <grid-list :to="item.to" :text="item.text" v-for="item in categorys"></grid-list>
+                <grid-list :to="item.to" :text="item.text" v-for="item in categorys">
+                    <div slot="icon">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-set"></use>
+                        </svg>
+                    </div>
+                </grid-list>
             </grids>
 
         </div>
