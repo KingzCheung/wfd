@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.notfound {
+    text-align: center;
+    margin-top: 30%;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    h1 {
+        font-size: 150px;
+        font-weight: 100;
+    }
+    p {
+        margin: 10px 0;
+    }
+    .linkto {
+        a {
+            padding: 6px 10px;
+        }
+    }
+}

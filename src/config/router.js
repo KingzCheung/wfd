@@ -10,6 +10,7 @@ import Setting from  '../views/Setting.vue';
 import Cookbook from  '../views/Cookbook.vue';
 import Category from  '../views/Category.vue';
 import User from '../views/User.vue';
+import Notfound from '../views/Notfound.vue';
 
 Vue.component(Viewlist.name, Viewlist);
 Vue.component(Add.name, Add);
@@ -59,6 +60,11 @@ export default new VueRouter({
             component: Category
         },
         {
+            path: '/notfound',
+            name: 'notfound',
+            component: Notfound
+        },
+        {
             path: '/',
             name: 'index',
             component: (resolve) => {
@@ -67,7 +73,7 @@ export default new VueRouter({
         },
         {
             path: '*', //其他页面，强制跳转
-            redirect: '/'
+            redirect: '/notfound'
         }
     ]
 });
