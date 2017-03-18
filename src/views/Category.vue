@@ -4,7 +4,7 @@
         <div class="container">
 
             <grids>
-                <grid-list :to="item.to" :text="item.text" v-for="item in categorys">
+                <grid-list :to="item.to" :text="item.text" v-for="item in categorys" :key="item.text">
                     <div slot="icon">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-set"></use>

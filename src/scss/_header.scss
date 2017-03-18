@@ -24,10 +24,20 @@
     }
     &.is-fixed {
         position: fixed;
-        left:0;
-        top:0;
+        left: 0;
+        top: 0;
         right: 0;
         z-index: 999;
+    }
+    &.big-header {
+        margin-bottom: 0;
+        &:after {
+            color: #fff;
+            border-bottom: none;
+        }
+        & + .container {
+            border-top: 50px solid transparent;
+        }
     }
 
     .header-left {
@@ -35,7 +45,7 @@
         position: absolute;
         left: 10px;
     }
-    .header-right{
+    .header-right {
         font-size: 12px;
         position: absolute;
         right: 10px;
@@ -44,7 +54,7 @@
             height: 1.5em;
         }
     }
-    a{
+    a {
         display: inline-block;
     }
 }

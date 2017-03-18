@@ -1,7 +1,7 @@
 <template>
     <div class="grids">
         <slot>
-            <grid-list v-for="item in 9">{{item}}</grid-list>
+            <grid-list v-for="item in 9" :key="item">{{item}}</grid-list>
         </slot>
     </div>
 </template>

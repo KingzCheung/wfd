@@ -1,23 +1,21 @@
 <template>
-    <div id="head">
-        <header class="header is-fixed">
-            <div v-if="left" class="header-left">
-                <a onclick="window.history.go(-1)">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-back"></use>
-                    </svg>
-                </a>
-            </div>
-            <h3 class="header-title">{{message}}</h3>
-            <div v-if="right" class="header-right">
-                <router-link to="/setting">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-set"></use>
-                    </svg>
-                </router-link>
-            </div>
-        </header>
-    </div>
+    <header class="header is-fixed" :class="className">
+        <div v-if="left" class="header-left">
+            <a onclick="window.history.go(-1)">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-back"></use>
+                </svg>
+            </a>
+        </div>
+        <h3 class="header-title">{{message}}</h3>
+        <div v-if="right" class="header-right">
+            <router-link to="/setting">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-set"></use>
+                </svg>
+            </router-link>
+        </div>
+    </header>
 </template>
 
 <style lang="scss">
@@ -35,8 +33,9 @@
         },
         props: {
             message: String,
-            left: Boolean,
-            right: Boolean
+            className: String,
+            right: Boolean,
+
         },
 
     }
