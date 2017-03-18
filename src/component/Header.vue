@@ -1,12 +1,5 @@
 <template>
     <header class="header is-fixed" :class="className">
-        <div v-if="left" class="header-left">
-            <a onclick="window.history.go(-1)">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-back"></use>
-                </svg>
-            </a>
-        </div>
         <h3 class="header-title">{{message}}</h3>
         <div v-if="right" class="header-right">
             <router-link to="/setting">

@@ -1,10 +1,8 @@
 <template>
-    <div id="cell">
-        <div class="w-cells">
-            <slot>
-                <cell-list></cell-list>
-            </slot>
-        </div>
+    <div class="w-cells">
+        <slot>
+            <cell-list></cell-list>
+        </slot>
     </div>
 </template>
 
