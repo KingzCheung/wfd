@@ -7,9 +7,10 @@ import './fonts/iconfont.css';
 import './fonts/iconfont';
 import router from './config/router';
 import axios from 'axios';
+import config from './config/config';
 
 Vue.prototype.$http = axios;
-
+Vue.prototype.$config = config;
 Vue.use(VueRouter);
 Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);

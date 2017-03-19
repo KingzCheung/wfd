@@ -2,7 +2,7 @@
     <div id="index">
         <w-head message="今天吃什么"></w-head>
         <div class="container">
-            <mt-swipe :auto="0" class="banner">
+            <mt-swipe :auto="4000" class="banner">
                 <mt-swipe-item>
                     <a href="#">
                         <img src="http://s2.cdn.xiachufang.com/a4dc885c000611e7bc9d0242ac110002_963w_770h.jpg?imageView2/2/w/620/interlace/1/q/90">
@@ -55,15 +55,13 @@
         data () {
             return {}
         },
-        components:{
-            week,feast
+        components: {
+            week, feast
         },
-        methods: {
-            test: function () {
-                this.$http.get('https://www.baidu.com').then(function (resp) {
-                    console.log(resp)
-                })
-            }
+        created: function () {
+            this.$http.get(this.$config.api('category')).then(function (resp) {
+                console.log(resp)
+            });
         }
     }
 </script>
