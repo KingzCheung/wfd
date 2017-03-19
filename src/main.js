@@ -3,11 +3,12 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import {Tabbar, TabItem, Swipe, SwipeItem, Field, Switch} from 'mint-ui';
 import w_head from './component/Header.vue';
-
-
 import './fonts/iconfont.css';
 import './fonts/iconfont';
-import router from './config/router'
+import router from './config/router';
+import axios from 'axios';
+
+Vue.prototype.$http = axios;
 
 Vue.use(VueRouter);
 Vue.component(Tabbar.name, Tabbar);

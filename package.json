@@ -21,6 +21,7 @@
     "vue-style-loader": "^2.0.3"
   },
   "devDependencies": {
+      "axios": "^0.15.3",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-preset-latest": "^6.0.0",
