@@ -60,7 +60,7 @@
         },
         methods: {
             test: function () {
-                this.$http.get('https:www.baidu.com').then(function (resp) {
+                this.$http.get('https://www.baidu.com').then(function (resp) {
                     console.log(resp)
                 })
             }
