@@ -52,4 +52,7 @@ $main-color:#F44336;
 .container{
     border-top: 60px solid transparent;
     border-bottom: 60px solid transparent;
+    &.no-tab {
+        border-bottom: 10px solid transparent;
+    }
 }

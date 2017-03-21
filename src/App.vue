@@ -3,24 +3,16 @@
 
         <router-view></router-view>
 
-        <w-tab></w-tab>
     </div>
 </template>
 
 <script>
-    import w_tab from './component/Tabbar.vue';
 
     export default {
         name: 'app',
         data () {
-            return {
-                msg: 'Welcome to Your Vue.js App'
-            }
+            return {}
         },
-        components: {
-            'w-tab': w_tab
-        },
-
     }
 </script>
 

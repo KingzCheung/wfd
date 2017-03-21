@@ -4,6 +4,7 @@
             <w-head message="榜单"></w-head>
             <list></list>
         </div>
+        <w-tab></w-tab>
     </div>
 </template>
 

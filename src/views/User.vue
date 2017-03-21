@@ -18,7 +18,7 @@
         <div class="container login-msg" v-if="!user.id">
             <router-link to="/signin" class="btn btn-info btn-inline">你还未登录，请先登录</router-link>
         </div>
-
+        <w-tab></w-tab>
     </div>
 </template>
 

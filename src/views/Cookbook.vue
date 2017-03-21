@@ -1,10 +1,9 @@
 <template>
     <div id="cookbook">
         <w-head message="详情" left></w-head>
-        <div class="container">
+        <div class="container no-tab">
             <div class="cookbook-cover">
-                <img :src="cookbook.data.img"
-                     alt="">
+                <img :src="cookbook.data.img">
             </div>
             <div class="cookbook-detail">
                 <div class="cb-title"><h2>{{ cookbook.data.name }}</h2></div>
@@ -14,26 +13,14 @@
                 <section class="ingredients">
                     <h3>用料</h3>
                     <cells>
-                        <cell-list>
-                            <p slot="header">猪肉</p>
-                            <p slot="body">1两</p>
-                            <p slot="footer">必选</p>
+
+                        <cell-list v-for="ing in cookbook.data.ingredient">
+                            <p slot="header">{{ing.name}}</p>
+                            <p slot="body">{{ ing.weight }}</p>
+                            <p slot="footer" v-if="ing.required == 1">必选</p>
+                            <p slot="footer" v-else>可选</p>
                         </cell-list>
-                        <cell-list>
-                            <p slot="header">料酒</p>
-                            <p slot="body">1汤勺</p>
-                            <p slot="footer">必选</p>
-                        </cell-list>
-                        <cell-list>
-                            <p slot="header">盐</p>
-                            <p slot="body">1汤勺</p>
-                            <p slot="footer">必选</p>
-                        </cell-list>
-                        <cell-list>
-                            <p slot="header">酱油</p>
-                            <p slot="body">1汤勺</p>
-                            <p slot="footer">必选</p>
-                        </cell-list>
+
                     </cells>
                 </section>
                 <section class="cb-content">

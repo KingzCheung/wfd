@@ -1,5 +1,10 @@
 <template>
     <header class="header is-fixed" :class="className">
+        <a href="javascript:;" onclick="history.go(-1)" v-if="left">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-back"></use>
+            </svg>
+        </a>
         <h3 class="header-title">{{message}}</h3>
         <div v-if="right" class="header-right">
             <router-link to="/setting">
@@ -28,6 +33,7 @@
             message: String,
             className: String,
             right: Boolean,
+            left: Boolean,
 
         },
 

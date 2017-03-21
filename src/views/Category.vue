@@ -14,7 +14,7 @@
             </grids>
 
         </div>
-
+        <w-tab></w-tab>
     </div>
 </template>
 

@@ -40,7 +40,7 @@
             <week></week>
             <feast></feast>
         </div>
-
+        <w-tab></w-tab>
     </div>
 </template>
 
