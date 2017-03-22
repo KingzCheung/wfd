@@ -34,8 +34,21 @@
         }
     }
     .cb-content {
+        font-size: 15px;
+        line-height: 1.4;
         h3 {
             margin: 10px 0;
+        }
+        ol {
+            list-style-type: decimal;
+            -webkit-padding-start: rem(20px);
+        }
+        li {
+            display: list-item;
+            margin: rem(10px) 0;
+        }
+        img {
+            max-width: 100%;
         }
     }
 }
