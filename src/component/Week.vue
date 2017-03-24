@@ -2,53 +2,19 @@
     <div id="week">
         <div class="week">
             <div class="week-item">
-                <a href="">
+                <a href="" v-for="(week,index) in weeks" :key="index" v-if="index < 4">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-cooked"></use>
+                        <use :xlink:href="week.icon"></use>
                     </svg>
-                    <p>星期一</p>
-                </a>
-
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-fried"></use>
-                    </svg>
-                    <p>星期二</p>
-                </a>
-
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-pot"></use>
-                    </svg>
-                    <p>星期三</p>
-                </a>
-
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-steaming"></use>
-                    </svg>
-                    <p>星期四</p>
+                    <p>{{week.week_name}}</p>
                 </a>
             </div>
-
             <div class="week-item">
-                <a href="#">
+                <a href="" v-for="(week,index) in weeks" :key="index" v-if="index >= 4">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-omlet"></use>
+                        <use :xlink:href="week.icon"></use>
                     </svg>
-                    <p>星期五</p>
-                </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-meat"></use>
-                    </svg>
-                    <p>星期六</p>
-                </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-spaghetti"></use>
-                    </svg>
-                    <p>星期日</p>
+                    <p>{{week.week_name}}</p>
                 </a>
                 <a href="#">
                     <svg class="icon" aria-hidden="true">
