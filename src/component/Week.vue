@@ -69,9 +69,19 @@
         name: 'week',
         data () {
             return {
-                msg: 'Welcome to Foo'
+                weeks: null
             }
         },
+        created: function () {
+            let self = this;
+            self.$http.get(self.$config.api('plan')).then(function (resp) {
+                self.today = resp.data;
+            });
+            self.$http.get(self.$config.api('plan/week')).then(function (resp) {
+                self.weeks = resp.data;
+            });
+
+        }
 
     }
 </script>
