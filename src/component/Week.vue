@@ -2,7 +2,7 @@
     <div id="week">
         <div class="week">
             <div class="week-item">
-                <a href="#">
+                <a href="">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-cooked"></use>
                     </svg>
@@ -74,11 +74,9 @@
         },
         created: function () {
             let self = this;
-            self.$http.get(self.$config.api('plan')).then(function (resp) {
-                self.today = resp.data;
-            });
             self.$http.get(self.$config.api('plan/week')).then(function (resp) {
                 self.weeks = resp.data;
+                console.log(self.weeks)
             });
 
         }

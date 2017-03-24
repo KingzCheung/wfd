@@ -14,7 +14,9 @@
                 <p class="banner-hd">今天菜谱:</p>
                 <ul>
                     <li v-for="(item,i,index) in today" :key="index">
-                        <router-link :to="{ name: 'cookbook', params: { id: 123 }}">{{item.cookbook.name}}</router-link>
+                        <router-link :to="{ name: 'cookbook', params: { id: item.cookbook.id }}">
+                            {{item.cookbook.name}}
+                        </router-link>
                     </li>
                 </ul>
             </div>
