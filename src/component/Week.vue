@@ -2,26 +2,28 @@
     <div id="week">
         <div class="week">
             <div class="week-item">
-                <a href="" v-for="(week,index) in weeks" :key="index" v-if="index < 4">
+                <router-link :to="{ name: 'subCategory', params: { ids: week.wid }}" v-for="(week,index) in weeks"
+                             :key="index" v-if="index < 4">
                     <svg class="icon" aria-hidden="true">
                         <use :xlink:href="week.icon"></use>
                     </svg>
                     <p>{{week.week_name}}</p>
-                </a>
+                </router-link>
             </div>
             <div class="week-item">
-                <a href="" v-for="(week,index) in weeks" :key="index" v-if="index >= 4">
+                <router-link :to="{ name: 'subCategory', params: { ids: week.wid }}" v-for="(week,index) in weeks"
+                             :key="index" v-if="index >= 4">
                     <svg class="icon" aria-hidden="true">
                         <use :xlink:href="week.icon"></use>
                     </svg>
                     <p>{{week.week_name}}</p>
-                </a>
-                <a href="#">
+                </router-link>
+                <router-link :to="{name:'cookbook'}">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-gengduo"></use>
                     </svg>
                     <p>更多</p>
-                </a>
+                </router-link>
 
             </div>
 

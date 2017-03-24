@@ -9,6 +9,7 @@ import './fonts/iconfont';
 import router from './config/router';
 import axios from 'axios';
 import config from './config/config';
+import store from  './config/store';
 
 Vue.prototype.$http = axios;
 Vue.prototype.$config = config;
@@ -26,6 +27,7 @@ Vue.component(Switch.name, Switch);
 
 new Vue({
     router: router,
+    store: store,
     el: '#app',
     render: h => h(App)
 

@@ -60,6 +60,11 @@ export default new VueRouter({
             component: Category
         },
         {
+            path: '/category/:ids',
+            name: 'subCategory',
+            component: Category
+        },
+        {
             path: '/notfound',
             name: 'notfound',
             component: Notfound
