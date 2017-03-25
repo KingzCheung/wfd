@@ -14,7 +14,7 @@
                     <h3>用料</h3>
                     <cells>
 
-                        <cell-list v-for="ing in cookbook.ingredient">
+                        <cell-list v-for="(ing, index) in cookbook.ingredient" :key="index">
                             <p slot="header">{{ing.name}}</p>
                             <p slot="body">{{ ing.weight }}</p>
                             <p slot="footer" v-if="ing.required == 1">必选</p>

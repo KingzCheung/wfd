@@ -1,10 +1,11 @@
 <template>
     <div id="list">
         <ul class="cell">
-            <li v-for='(item,index) in titlelist' :class="{current:iscur==index}" @click="iscur=index" class="cell-list">
-                <router-link to="/">
+            <li v-for='(item,index) in titlelist' :class="{current:iscur==index}" @click="iscur=index"
+                class="cell-list">
+                <router-link :to="{name:'cookbook',params:{id:item.id}}">
                     <aside>
-                        <img v-bind:src="item.src">
+                        <img v-bind:src="item.img">
                     </aside>
                     <h3 class="list-title">{{item.name}}</h3>
                 </router-link>
@@ -23,23 +24,16 @@
         name: 'list',
         data () {
             return {
-                iscur:0,
-                titlelist:[
-                    {
-                        name:'宫爆鸡丁',
-                        src:'http://s2.cdn.xiachufang.com/4daad8ea877a11e6a9a10242ac110002_469w_701h.jpg?imageView2/1/w/375/h/259/interlace/1/q/90'
-                    },
-                    {
-                        name:'鱼香肉丝',
-                        src:'http://s2.cdn.xiachufang.com/b89670e8873311e6a9a10242ac110002_690w_459h.jpg?imageView2/1/w/375/h/259/interlace/1/q/90'
-                    },
-                    {
-                        name:'红烧豆腐',
-                        src:'http://s2.cdn.xiachufang.com/195d38a2880211e6a9a10242ac110002_600w_400h.jpg?imageView2/1/w/375/h/259/interlace/1/q/90'
-                    }
-                ]
+                iscur: 0,
+                titlelist: null
             }
         },
+        created: function () {
+            let self = this;
+            self.$http.get(self.$config.api('list')).then(function (resp) {
+                self.titlelist = resp.data;
+            });
+        }
 
     }
 </script>

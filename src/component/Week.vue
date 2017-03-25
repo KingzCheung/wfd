@@ -44,7 +44,6 @@
             let self = this;
             self.$http.get(self.$config.api('plan/week')).then(function (resp) {
                 self.weeks = resp.data;
-                console.log(self.weeks)
             });
 
         }
