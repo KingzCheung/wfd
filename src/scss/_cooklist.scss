@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.cooklist {
+    .cook-title {
+        text-align: center;
+        font-weight: normal;
+        font-size: 20px;
+        margin-top: 100px;
+    }
+    ul.list {
+        text-align: center;
+        margin-top: 50px;
+        li {
+            display: inline-block;
+            &:nth-child(odd) {
+                transform: rotate(5deg);
+            }
+            &:nth-child(even) {
+                transform: rotate(-5deg);
+            }
+            &:active {
+                transform: rotate(0deg);
+            }
+            &:hover {
+                transform: rotate(0deg);
+            }
+        }
+        a {
+            font-size: 18px;
+            display: block;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            line-height: 300%;
+        }
+    }
+}

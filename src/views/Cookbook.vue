@@ -3,7 +3,7 @@
         <w-head message="详情" left></w-head>
         <div class="container no-tab">
             <div class="cookbook-cover">
-                <img :src="cookbook.data.img">
+                <img :src="cookbook.img">
             </div>
             <div class="cookbook-detail">
                 <div class="cb-title"><h2>{{ cookbook.name }}</h2></div>

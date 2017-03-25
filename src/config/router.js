@@ -11,8 +11,10 @@ import Cookbook from  '../views/Cookbook.vue';
 import Category from  '../views/Category.vue';
 import User from '../views/User.vue';
 import Notfound from '../views/Notfound.vue';
+import Cooklist from '../views/Cooklist.vue';
 
 Vue.component(Viewlist.name, Viewlist);
+Vue.component(Cooklist.name, Cooklist);
 Vue.component(Add.name, Add);
 Vue.component(Cookbook.name, Cookbook);
 Vue.component(Category.name, Category);
@@ -60,9 +62,9 @@ export default new VueRouter({
             component: Category
         },
         {
-            path: '/category/:ids',
-            name: 'subCategory',
-            component: Category
+            path: '/cooklist/:time',
+            name: 'cooklist',
+            component: Cooklist
         },
         {
             path: '/notfound',
