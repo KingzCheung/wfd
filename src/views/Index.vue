@@ -4,10 +4,10 @@
         <div class="container">
             <mt-swipe :auto="4000" class="banner">
                 <mt-swipe-item v-for="(item,i,index) in today" :key="index">
-                    <a href="#">
+                    <router-link :to="{ name: 'cookbook', params: { id: item.cookbook.id }}">
                         <img :src="item.cookbook.img">
                         <p>{{item.cookbook.name}}</p>
-                    </a>
+                    </router-link>
                 </mt-swipe-item>
             </mt-swipe>
             <div class="banner-desc">
