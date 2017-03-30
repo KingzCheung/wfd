@@ -1,6 +1,6 @@
 # wfd
 
-> A Vue.js project
+> what's for dinner ? 今天吃什么好呢？
 
 ## Build Setup
 
