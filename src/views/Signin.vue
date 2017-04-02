@@ -2,7 +2,7 @@
     <div id="signin">
 
         <div class="login">
-            <router-link to="router.go(-1)" class="cencel">
+            <router-link to="/" class="cencel">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-close"></use>
                 </svg>
@@ -54,7 +54,7 @@
                     redirect: '/'
                 };
 
-                this.$http.post('http://wfdend.dev/oauth/clients', data).then(function (resp) {
+                this.$http.post('http://wfdend.dev/oauth/token', data).then(function (resp) {
                     console.log(resp)
                 })
             }
