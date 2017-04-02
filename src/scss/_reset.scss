@@ -1,22 +1,27 @@
 @import "init";
-*{
-    padding:0;
-    margin:0;
+
+* {
+    padding: 0;
+    margin: 0;
 }
+
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
 }
+
 html {
     font-size: $html-font-size;
 }
-html,body {
+
+html, body {
     background-color: #fafafa;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
+
 h1, h2 {
     font-weight: normal;
 }
@@ -37,13 +42,19 @@ a {
 }
 
 .icon {
-    width: 2em; height: 2em;
+    width: 2em;
+    height: 2em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
 }
 
-button {
+button, input, textarea {
     border: 0;
     appearance: none;
+    outline: none;
+}
+
+textarea {
+    resize: none
 }

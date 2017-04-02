@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.comment {
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #777;
+    .coll {
+        padding: 0 10px;
+        color: #777;
+        &.active {
+            color: $main-color;
+        }
+        i {
+            font-size: 20px;
+        }
+        sup {
+            font-size: 12px;
+            padding-left: 2px;
+        }
+        &:active {
+            background-color: #eeeeee;
+        }
+    }
+    &:before {
+        @include line-top;
+    }
+    .icon {
+        width: 1.5em;
+    }
+    input {
+        flex: 1;
+        line-height: 50px;
+    }
+    .submit {
+        padding: 0 12px;
+        line-height: 50px;
+        background-color: $main-color;
+        color: #FFFFFF;
+        &:active {
+            background-color: derken($main-color, 20%);
+        }
+    }
+
+}

@@ -1,7 +1,7 @@
 <template>
     <div id="cookbook">
         <w-head message="详情" left></w-head>
-        <div class="container no-tab">
+        <div class="container">
             <div class="cookbook-cover">
                 <img :src="cookbook.img">
             </div>
@@ -29,6 +29,7 @@
                 </section>
             </div>
         </div>
+        <comment></comment>
     </div>
 </template>
 
@@ -40,6 +41,7 @@
 
     import cells from '../component/common/Cells.vue';
     import cell from '../component/common/Cell.vue';
+    import comment from '../component/Comment.vue';
 
     export default {
         name: 'cookbook',
@@ -50,7 +52,8 @@
         },
         components: {
             'cells': cells,
-            'cell-list': cell
+            'cell-list': cell,
+            'comment': comment
         },
         created: function () {
             let self = this;
