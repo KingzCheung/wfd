@@ -18,7 +18,7 @@
             </div>
             <div class="card-item">
                 <h4>2</h4>
-                <p class="title">做过</p>
+                <p class="title">评论</p>
             </div>
         </div>
     </div>

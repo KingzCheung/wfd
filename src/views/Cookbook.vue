@@ -29,7 +29,7 @@
                 </section>
             </div>
         </div>
-        <comment></comment>
+        <comment :cook="cookbook.id"></comment>
     </div>
 </template>
 

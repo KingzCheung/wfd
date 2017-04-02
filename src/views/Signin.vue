@@ -2,7 +2,7 @@
     <div id="signin">
 
         <div class="login">
-            <router-link to="/user" class="cencel">
+            <router-link to="router.go(-1)" class="cencel">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-close"></use>
                 </svg>
@@ -11,11 +11,11 @@
             <logo></logo>
 
             <div class="form">
-                <mt-field label="用户名" placeholder="请输入用户名" state="success"></mt-field>
-                <mt-field label="密码" placeholder="请输入密码" type="password" state="error"></mt-field>
+                <mt-field label="用户名" :attr="{name:'username'}" placeholder="请输入用户名"></mt-field>
+                <mt-field label="密码" :attr="{name:'password'}" placeholder="请输入密码" type="password"></mt-field>
 
                 <div class="submit">
-                    <button type="button" class="btn btn-info">登录</button>
+                    <button type="button" class="btn btn-info" @click="submit">登录</button>
                 </div>
 
             </div>
@@ -31,12 +31,33 @@
     export default {
         name: 'signin',
         data () {
-            return {
-                msg: 'Welcome to Foo'
-            }
+            return {}
         },
         components: {
             logo
+        },
+        methods: {
+            submit: function () {
+                let username = document.querySelector('input[name="username"]').value;
+                let password = document.querySelector('input[name="password"]').value;
+
+//                this.$http.post(this.$config.api('user'), {
+//                    username: username,
+//                    password: password
+//                }).then(function (resp) {
+//                    console.log(resp.data)
+//                });
+
+
+                const data = {
+                    name: 'kingzcheung',
+                    redirect: '/'
+                };
+
+                this.$http.post('http://wfdend.dev/oauth/clients', data).then(function (resp) {
+                    console.log(resp)
+                })
+            }
         }
 
     }
