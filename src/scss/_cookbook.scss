@@ -46,6 +46,10 @@
         li {
             display: list-item;
             margin: rem(10px) 0;
+            overflow: hidden;
+        }
+        p {
+            overflow: hidden;
         }
         img {
             max-width: 100%;
