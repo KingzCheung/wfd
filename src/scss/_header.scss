@@ -59,4 +59,15 @@
         position: absolute;
         left: 10px;
     }
+
+    &.is-transparent {
+        background: transparent;
+        color: white;
+        & + .container {
+            border-top: 0;
+        }
+        &:after {
+            border-bottom: none;
+        }
+    }
 }
