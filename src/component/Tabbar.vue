@@ -28,7 +28,7 @@
                 <h3 class="item-label">分类</h3>
             </router-link>
 
-            <router-link to="/user" class="tab-item" @click="deving">
+            <router-link to="/user" class="tab-item">
                 <div class="item-icon">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-account"></use>
@@ -52,9 +52,6 @@
         },
 
         methods:{
-            select:function () {
-                alert(123)
-            },
 
         }
 

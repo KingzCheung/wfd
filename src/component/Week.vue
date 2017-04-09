@@ -19,7 +19,7 @@
                 </svg>
                 <p>{{week.week_name}}</p>
             </router-link>
-            <router-link :to="{name:'cookbook'}">
+            <router-link :to="{name:'viewlist'}">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-gengduo"></use>
                 </svg>

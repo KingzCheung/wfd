@@ -9,7 +9,7 @@ import apiProduction from './api_production';
 export default {
     api: function (apiname) {
         let name = apiname || '';
-        if (env.env === 'debug') {
+        if (env.debug === true) {
             return apiDebug.host + name;
         } else {
             return apiProduction.host + name;

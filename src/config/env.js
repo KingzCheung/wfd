@@ -3,5 +3,5 @@
  */
 
 export default {
-    env: 'debug'
+    debug: false
 }
