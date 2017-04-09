@@ -1,9 +1,7 @@
 <template>
     <header class="header is-fixed" :class="className">
-        <a href="javascript:;" onclick="history.go(-1)" v-if="left">
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-back"></use>
-            </svg>
+        <a href="javascript:;" onclick="history.go(-1)" v-if="left" class="header-left">
+            <i class="iconfont icon-back"></i>
         </a>
         <h3 class="header-title">{{message}}</h3>
         <div v-if="right" class="header-right">
