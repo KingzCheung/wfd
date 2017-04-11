@@ -39,6 +39,7 @@
         data () {
             return {
                 today: null,
+                weeks: null,
             }
         },
         components: {
@@ -52,6 +53,7 @@
             self.$http.get(self.$config.api('plan/week')).then(function (resp) {
                 self.weeks = resp.data;
             });
+
 
         }
     }
