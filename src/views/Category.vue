@@ -6,7 +6,10 @@
                 <dt>{{item.cname}}</dt>
 
                 <dd v-for="(subitem,subi,subindex) in categorys['sub']" :key="subindex" v-if="subitem.pid == item.id">
-                    <a href="#">{{subitem.cname}}</a>
+                    <a href="#">
+                        <span class="title">{{subitem.cname}}</span>
+                        <i class="iconfont icon-more"></i>
+                    </a>
                 </dd>
 
             </dl>
