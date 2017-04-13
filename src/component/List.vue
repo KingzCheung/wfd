@@ -30,7 +30,8 @@
         },
         created: function () {
             let self = this;
-            self.$http.get(self.$config.api('list')).then(function (resp) {
+            let category = self.$route.query.category || '';
+            self.$http.get(self.$config.api('list/' + category)).then(function (resp) {
                 self.titlelist = resp.data;
             });
         }

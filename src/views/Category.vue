@@ -4,12 +4,13 @@
         <div class="container">
             <dl class="listgroup" v-for="(item,i,index) in categorys['root']" :key="index">
                 <dt>{{item.cname}}</dt>
-
                 <dd v-for="(subitem,subi,subindex) in categorys['sub']" :key="subindex" v-if="subitem.pid == item.id">
-                    <a href="#">
+
+                    <router-link :to="{name:'viewlist',query:{category:subitem.id}}">
                         <span class="title">{{subitem.cname}}</span>
                         <i class="iconfont icon-more"></i>
-                    </a>
+                    </router-link>
+
                 </dd>
 
             </dl>
