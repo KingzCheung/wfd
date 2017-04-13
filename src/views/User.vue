@@ -5,14 +5,19 @@
             <profile></profile>
             <cells>
                 <cell>
-                    <p slot="header">第一个开头</p>
+                    <p slot="header">夜间模式</p>
                     <mt-switch v-model="value" slot="footer"></mt-switch>
                 </cell>
 
                 <cell link="https://www.kingzcheung.com">
-                    <p slot="header">第二个开头</p>
+                    <p slot="header">关于作者</p>
                 </cell>
+
             </cells>
+
+            <div class="about">
+                当前版本:V1.0.0
+            </div>
         </div>
 
         <div class="container login-msg" v-if="!user.id">

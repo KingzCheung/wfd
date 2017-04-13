@@ -17,6 +17,7 @@
         &:before {
             @include line-top;
         }
+
     }
     .cell-header {
         width: 45%;
@@ -37,6 +38,7 @@
 }
 
 a.cell-list {
+    color: #2c3e50;
     &:active {
         background-color: #fafafa;
     }

@@ -34,7 +34,7 @@
                         <use xlink:href="#icon-account"></use>
                     </svg>
                 </div>
-                <h3 class="item-label">我的(开发中)</h3>
+                <h3 class="item-label">我的</h3>
             </router-link>
         </div>
     </div>

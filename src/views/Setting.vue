@@ -9,7 +9,7 @@
                 </cell-list>
 
                 <cell-list link="https://www.kingzcheung.com">
-                    <p slot="header">第二个开头</p>
+                    <p slot="header">作者</p>
                 </cell-list>
             </cells>
 
